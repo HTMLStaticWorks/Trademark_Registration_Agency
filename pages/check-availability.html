@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aegis Mark | Advanced Trademark & Brand Shield Checker</title>
+  <meta name="description" content="Verify your brand name and logo availability instantly. Run deep similarity matches against international Nice Class directories.">
+  
+  <!-- CSS Framework & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom Core Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- Sticky Fixed Header -->
+  <header class="sticky-header">
+    <div class="container d-flex align-items-center justify-content-between">
+      
+      <!-- Logo -->
+      <a href="../index.html" class="navbar-brand">
+        <svg class="logo-icon" width="32" height="32" viewBox="0 0 100 100" aria-hidden="true">
+          <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="none" stroke="currentColor" stroke-width="8"/>
+          <path d="M30,50 L50,30 L70,50 L50,70 Z" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">AEGIS<span>MARK</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="navbar-nav d-none d-lg-flex flex-row gap-2 align-items-center">
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Home
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+            <li><a class="dropdown-item" href="../index.html">Home 1</a></li>
+            <li><a class="dropdown-item" href="../pages/home-2.html">Home 2</a></li>
+          </ul>
+        </div>
+        <a class="nav-link" href="./about.html">About</a>
+        <a class="nav-link" href="./services.html">Services</a>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Check Availability
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item active" href="./check-availability.html">Availability Checker</a></li>
+            <li><a class="dropdown-item" href="./blog.html">Blog Page</a></li>
+            <li><a class="dropdown-item" href="./guides.html">Trademark Guides</a></li>
+            <li><a class="dropdown-item" href="./faqs.html">FAQs</a></li>
+            <li><a class="dropdown-item" href="./legal-updates.html">Legal Updates</a></li>
+          </ul>
+        </div>
+      <a class="nav-link" href="./pricing.html">Pricing</a>
+        
+        <a class="nav-link" href="./contact.html">Contact</a>
+        </nav>
+
+      <!-- Global Actions -->
+      <div class="header-actions">
+        <button class="toggle-btn rtl-toggle-btn" aria-label="Switch Direction">RTL</button>
+        <button class="toggle-btn theme-toggle-btn" aria-label="Switch Theme">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+        <a href="./login.html" class="nav-login-btn">Login</a>
+      </div>
+
+      <!-- Mobile Controls -->
+      <div class="header-actions-mobile d-lg-none d-flex align-items-center">
+        <button class="toggle-btn rtl-toggle-btn" aria-label="Switch Layout Direction">RTL</button>
+        <button class="toggle-btn theme-toggle-btn" aria-label="Switch Color Scheme">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+        <button class="hamburger-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle Navigation">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Fullscreen Mobile Navigation Menu -->
+  <div id="mobile-menu" class="fullscreen-menu" aria-hidden="true">
+    <nav class="fullscreen-nav">
+      <a href="#" class="mobile-dropdown-toggle d-flex align-items-center justify-content-center gap-2" data-bs-toggle="collapse" data-bs-target="#mobileHome" aria-expanded="false">
+        Home <i class="bi bi-chevron-down fs-4"></i>
+      </a>
+      <div class="collapse" id="mobileHome">
+        <div class="d-flex flex-column gap-2 mt-2" style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: var(--radius-md);">
+          <a href="../index.html" style="font-size: 1.5rem;">Home 1</a>
+          <a href="../pages/home-2.html" style="font-size: 1.5rem;">Home 2</a>
+        </div>
+      </div>
+      <a href="./about.html">About</a>
+      <a href="./services.html">Services</a>
+      <!-- Collapsible Check Availability Menu -->
+      <a href="#" class="mobile-dropdown-toggle d-flex align-items-center justify-content-center gap-2 active" data-bs-toggle="collapse" data-bs-target="#mobileCheckAvailability" aria-expanded="true">
+        Check Availability <i class="bi bi-chevron-down fs-4"></i>
+      </a>
+      <div class="collapse show" id="mobileCheckAvailability">
+        <div class="d-flex flex-column gap-2 mt-2" style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: var(--radius-md);">
+          <a href="./check-availability.html" class="active" style="font-size: 1.5rem;">Availability Checker</a>
+          <a href="./blog.html" style="font-size: 1.5rem;">Blog Page</a>
+          <a href="./guides.html" style="font-size: 1.5rem;">Trademark Guides</a>
+          <a href="./faqs.html" style="font-size: 1.5rem;">FAQs</a>
+          <a href="./legal-updates.html" style="font-size: 1.5rem;">Legal Updates</a>
+        </div>
+      </div>
+      <a href="./pricing.html">Pricing</a>
+      
+      <a href="./contact.html">Contact</a>
+      <hr style="width: 50px; border-color: rgba(255, 255, 255, 0.2); margin: 20px auto;">
+      <a href="./login.html" class="btn btn-premium btn-premium-primary mt-2">Login</a>
+      <a href="./register.html" class="btn btn-premium btn-premium-secondary mt-2">Register</a>
+    </nav>
+  </div>
+
+  <!-- Hero Banner -->
+  <section class="section-padding bg-dark text-white text-center position-relative checker-hero-section" style="padding-top: 150px; padding-bottom: 80px;">
+    <div class="container reveal-fade">
+      <span class="text-uppercase fw-bold text-warning letter-spacing-1">Registry Screening</span>
+      <h1 class="mt-2 text-white display-4 font-headings">Brand Search Portal</h1>
+      <p class="text-light-50 max-width-600 mx-auto fs-5" style="color: rgba(255, 255, 255, 0.75);">Execute instant availability audits against active global trademark registries.</p>
+    </div>
+  </section>
+
+  <!-- Interactive Search Section -->
+  <section class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-xl-11">
+        <div class="checker-wrapper mt-0 shadow-lg">
+          <h3 class="text-primary mb-4 text-center">Trademark Scan Parameters</h3>
+          <form id="trademark-checker-form">
+            <div class="search-input-group mb-3">
+              <i class="bi bi-search text-muted fs-5 me-2"></i>
+              <input id="trademark-search-input" type="text" placeholder="Enter brand name (e.g. Google)..." aria-label="Brand Name Query" required>
+              
+              <select class="search-class-select" aria-label="Select Nice Class">
+                <option value="09">Class 09 (Tech/Soft)</option>
+                <option value="35">Class 35 (Business/Ad)</option>
+                <option value="42">Class 42 (Legal/IT)</option>
+                <option value="45">Class 45 (Legal Serv)</option>
+              </select>
+              
+              <button type="submit" class="checker-btn d-none d-md-block">Verify Brand</button>
+            </div>
+            <button type="submit" class="checker-btn w-100 d-block d-md-none mb-3">Verify Brand</button>
+            
+            <!-- Advanced Option Toggles -->
+            <div class="row g-3 px-2 pt-2">
+              <div class="col-md-6">
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="phonetic-search" style="accent-color: var(--secondary-color);">
+                  <label class="form-check-label text-secondary" for="phonetic-search" style="font-size: 0.9rem;">Include Phonetic/Similar Matches</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="madrid-search" style="accent-color: var(--secondary-color);">
+                  <label class="form-check-label text-secondary" for="madrid-search" style="font-size: 0.9rem;">Query WIPO Madrid Protocol database</label>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <!-- Search Results (JS populated) -->
+          <div id="checker-results" class="checker-results" aria-live="polite"></div>
+        </div>
+
+        <!-- History Logging Card -->
+        <div class="glass-card p-4 mt-4 reveal-fade">
+          <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-3 gap-3">
+            <h4 class="text-primary mb-0"><i class="bi bi-clock-history me-2 text-warning"></i> Recent Search Audits</h4>
+            <button class="btn btn-sm btn-outline-danger d-none" id="clear-history-btn" style="border-radius: var(--radius-pill); font-size: 0.8rem;">Clear All</button>
+          </div>
+          <div id="search-history-container">
+            <p class="text-muted mb-0 italic" style="font-style: italic;">No search history found in this session.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Nice Class Info Guide -->
+  <section class="bg-light-offset section-padding" style="background-color: var(--bg-offset);">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5 reveal-fade">
+        <div class="col-lg-8">
+          <span class="text-uppercase fw-bold text-warning letter-spacing-1">Classification Reference</span>
+          <h2 class="mt-2 text-primary">Core Operational Vectors</h2>
+          <p class="text-secondary">Determine which Nice classification classes align with your products and services to ensure correct licensing coordinates.</p>
+        </div>
+      </div>
+
+      <div class="row g-4 reveal-fade">
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card p-4 h-100">
+            <h4 class="text-warning mb-2">Class 09</h4>
+            <h5 class="text-primary">Software & Hardware</h5>
+            <p class="text-secondary mb-0" style="font-size: 0.9rem;">Applies to mobile apps, operating platforms, data servers, semiconductor tech, and crypto systems.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card p-4 h-100">
+            <h4 class="text-warning mb-2">Class 35</h4>
+            <h5 class="text-primary">Business & Marketing</h5>
+            <p class="text-secondary mb-0" style="font-size: 0.9rem;">Applies to digital marketplaces, retail stores, advertising agencies, and consulting firms.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card p-4 h-100">
+            <h4 class="text-warning mb-2">Class 42</h4>
+            <h5 class="text-primary">Scientific & SaaS</h5>
+            <p class="text-secondary mb-0" style="font-size: 0.9rem;">Applies to cloud hosting services, website design, scientific analysis, and database engineers.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card p-4 h-100">
+            <h4 class="text-warning mb-2">Class 45</h4>
+            <h5 class="text-primary">Legal & Security</h5>
+            <p class="text-secondary mb-0" style="font-size: 0.9rem;">Applies to trademark agencies, litigation consulting, brand monitoring, and intelligence systems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Footer -->
+  <footer class="luxury-footer">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Left Brand Col -->
+        <div class="col-lg-4">
+          <a href="../index.html" class="footer-logo">
+            <svg class="logo-icon" width="28" height="28" viewBox="0 0 100 100" aria-hidden="true">
+              <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="none" stroke="currentColor" stroke-width="8"/>
+              <path d="M30,50 L50,30 L70,50 L50,70 Z" fill="currentColor"/>
+            </svg>
+            <span class="logo-text text-white">AEGIS<span class="text-warning">MARK</span></span>
+          </a>
+          <p class="footer-motto">Protecting your corporate legacy with premium intelligence, automation, and world-class IP consultation.</p>
+          <div class="footer-social-links">
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter Page"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram Account"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="footer-heading">Agency</h5>
+          <ul class="footer-links">
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./services.html">Our Services</a></li>
+            <li><a href="./pricing.html">Pricing Plans</a></li>
+            <li><a href="./gallery.html">Success Stories</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="footer-heading">Resources</h5>
+          <ul class="footer-links">
+            <li><a href="./blog.html">Educational Blog</a></li>
+            <li><a href="./service-details.html">Class Directories</a></li>
+            <li><a href="./coming-soon.html">Client Portal</a></li>
+            <li><a href="./404.html">Objection Handling</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="col-md-4 col-lg-4">
+          <h5 class="footer-heading">Intelligence Brief</h5>
+          <p class="text-light-50 mb-3" style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Subscribe to get critical trademark updates and legal policy summaries.</p>
+          <form class="needs-validation-premium">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Your Email Address" required style="border-radius: 50px 0 0 50px; border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); color: #FFF;">
+              <button class="btn btn-premium btn-premium-primary" type="submit" style="border-radius: 0 50px 50px 0; margin-left:-2px;">Join</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p>&copy; 2026 Aegis Mark Inc. All Rights Reserved. Designed for Luxury Brand Security.</p>
+        <div class="footer-bottom-links">
+          <a href="./coming-soon.html">Privacy Policy</a>
+          <a href="./coming-soon.html">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Bootstrap & Main Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="../assets/js/main.js"></script>
+
+  <!-- Page level logic for search history -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('trademark-checker-form');
+      const input = document.getElementById('trademark-search-input');
+      const classSelect = document.querySelector('.search-class-select');
+      const historyContainer = document.getElementById('search-history-container');
+      const clearBtn = document.getElementById('clear-history-btn');
+
+      // Render initial history
+      renderHistory();
+
+      form.addEventListener('submit', (e) => {
+        const query = input.value.trim();
+        const niceClass = classSelect.value;
+        if (query) {
+          saveToHistory(query, niceClass);
+        }
+      });
+
+      clearBtn.addEventListener('click', () => {
+        localStorage.removeItem('trademark_searches');
+        renderHistory();
+      });
+
+      function saveToHistory(query, niceClass) {
+        let history = JSON.parse(localStorage.getItem('trademark_searches')) || [];
+        // Prevent duplicate adjacent entries
+        history = history.filter(item => !(item.query.toLowerCase() === query.toLowerCase() && item.niceClass === niceClass));
+        
+        const timestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        history.unshift({ query, niceClass, timestamp });
+        
+        // Cap history at 5 items
+        if (history.length > 5) history.pop();
+        
+        localStorage.setItem('trademark_searches', JSON.stringify(history));
+        // Add minor timeout to allow main.js results check animation to finish
+        setTimeout(renderHistory, 1000);
+      }
+
+      function renderHistory() {
+        const history = JSON.parse(localStorage.getItem('trademark_searches')) || [];
+        if (history.length === 0) {
+          historyContainer.innerHTML = '<p class="text-muted mb-0 italic" style="font-style: italic;">No search history found in this session.</p>';
+          clearBtn.classList.add('d-none');
+          return;
+        }
+
+        clearBtn.classList.remove('d-none');
+        let html = '<div class="list-group list-group-flush" style="background: transparent;">';
+        history.forEach(item => {
+          html += `
+            <div class="list-group-item d-flex justify-content-between align-items-center px-0 py-2 border-0 border-bottom" style="background: transparent; color: var(--text-secondary);">
+              <div>
+                <strong class="text-primary">"${item.query}"</strong>
+                <span class="badge bg-secondary-light text-dark ms-2" style="font-size: 0.75rem;">Nice Class ${item.niceClass}</span>
+              </div>
+              <small class="text-muted"><i class="bi bi-clock me-1"></i> ${item.timestamp}</small>
+            </div>
+          `;
+        });
+        html += '</div>';
+        historyContainer.innerHTML = html;
+      }
+    });
+  </script>
+</body>
+</html>

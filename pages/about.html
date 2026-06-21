@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aegis Mark | Elite Legal Experts & Brand Security Story</title>
+  <meta name="description" content="Read the Aegis Mark story. Discover our mission, legal achievements timeline, global statistics, and meet our elite trademark attorneys.">
+  
+  <!-- CSS Framework & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom Core Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- Sticky Fixed Header -->
+  <header class="sticky-header">
+    <div class="container d-flex align-items-center justify-content-between">
+      
+      <!-- Logo -->
+      <a href="../index.html" class="navbar-brand">
+        <svg class="logo-icon" width="32" height="32" viewBox="0 0 100 100" aria-hidden="true">
+          <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="none" stroke="currentColor" stroke-width="8"/>
+          <path d="M30,50 L50,30 L70,50 L50,70 Z" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">AEGIS<span>MARK</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="navbar-nav d-none d-lg-flex flex-row gap-2 align-items-center">
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Home
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+            <li><a class="dropdown-item" href="../index.html">Home 1</a></li>
+            <li><a class="dropdown-item" href="../pages/home-2.html">Home 2</a></li>
+          </ul>
+        </div>
+        <a class="nav-link active" href="./about.html">About</a>
+        <a class="nav-link" href="./services.html">Services</a>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Check Availability
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="./check-availability.html">Availability Checker</a></li>
+            <li><a class="dropdown-item" href="./blog.html">Blog Page</a></li>
+            <li><a class="dropdown-item" href="./guides.html">Trademark Guides</a></li>
+            <li><a class="dropdown-item" href="./faqs.html">FAQs</a></li>
+            <li><a class="dropdown-item" href="./legal-updates.html">Legal Updates</a></li>
+          </ul>
+        </div>
+      <a class="nav-link" href="./pricing.html">Pricing</a>
+        
+        <a class="nav-link" href="./contact.html">Contact</a>
+        </nav>
+
+      <!-- Global Actions -->
+      <div class="header-actions">
+        <button class="toggle-btn rtl-toggle-btn" aria-label="Switch Direction">RTL</button>
+        <button class="toggle-btn theme-toggle-btn" aria-label="Switch Theme">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+        <a href="./login.html" class="nav-login-btn">Login</a>
+      </div>
+
+      <!-- Mobile Controls -->
+      <div class="header-actions-mobile d-lg-none d-flex align-items-center">
+        <button class="toggle-btn rtl-toggle-btn" aria-label="Switch Layout Direction">RTL</button>
+        <button class="toggle-btn theme-toggle-btn" aria-label="Switch Color Scheme">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+        <button class="hamburger-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle Navigation">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Fullscreen Mobile Navigation Menu -->
+  <div id="mobile-menu" class="fullscreen-menu" aria-hidden="true">
+    <nav class="fullscreen-nav">
+      <a href="#" class="mobile-dropdown-toggle d-flex align-items-center justify-content-center gap-2" data-bs-toggle="collapse" data-bs-target="#mobileHome" aria-expanded="false">
+        Home <i class="bi bi-chevron-down fs-4"></i>
+      </a>
+      <div class="collapse" id="mobileHome">
+        <div class="d-flex flex-column gap-2 mt-2" style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: var(--radius-md);">
+          <a href="../index.html" style="font-size: 1.5rem;">Home 1</a>
+          <a href="../pages/home-2.html" style="font-size: 1.5rem;">Home 2</a>
+        </div>
+      </div>
+      <a href="./about.html" class="active">About</a>
+      <a href="./services.html">Services</a>
+      <!-- Collapsible Check Availability Menu -->
+      <a href="#" class="mobile-dropdown-toggle d-flex align-items-center justify-content-center gap-2" data-bs-toggle="collapse" data-bs-target="#mobileCheckAvailability" aria-expanded="false">
+        Check Availability <i class="bi bi-chevron-down fs-4"></i>
+      </a>
+      <div class="collapse" id="mobileCheckAvailability">
+        <div class="d-flex flex-column gap-2 mt-2" style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: var(--radius-md);">
+          <a href="./check-availability.html" style="font-size: 1.5rem;">Availability Checker</a>
+          <a href="./blog.html" style="font-size: 1.5rem;">Blog Page</a>
+          <a href="./guides.html" style="font-size: 1.5rem;">Trademark Guides</a>
+          <a href="./faqs.html" style="font-size: 1.5rem;">FAQs</a>
+          <a href="./legal-updates.html" style="font-size: 1.5rem;">Legal Updates</a>
+        </div>
+      </div>
+      <a href="./pricing.html">Pricing</a>
+      
+      <a href="./contact.html">Contact</a>
+      <hr style="width: 50px; border-color: rgba(255, 255, 255, 0.2); margin: 20px auto;">
+      <a href="./login.html" class="btn btn-premium btn-premium-primary mt-2">Login</a>
+      <a href="./register.html" class="btn btn-premium btn-premium-secondary mt-2">Register</a>
+    </nav>
+  </div>
+
+  <!-- Inner Page Banner -->
+  <section class="section-padding bg-dark text-white text-center position-relative about-hero-section" style="padding-top: 150px; padding-bottom: 80px;">
+    <div class="container reveal-fade">
+      <span class="text-uppercase fw-bold text-warning letter-spacing-1">Who We Are</span>
+      <h1 class="mt-2 text-white display-4 font-headings">Our Identity. Your Shield.</h1>
+      <p class="text-light-50 max-width-600 mx-auto fs-5" style="color: rgba(255, 255, 255, 0.75);">Discover how we merge legal supremacy with custom brand algorithms to manage thousands of global trademarks.</p>
+    </div>
+  </section>
+
+  <!-- Section 1: Brand Story & Mission -->
+  <section class="container section-padding">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 reveal-fade">
+        <div class="text-center">
+          <span class="text-uppercase fw-bold text-warning letter-spacing-1 d-block">Our Heritage</span>
+          <h2 class="mt-2 text-primary">The Luxury Legal Technology Standard</h2>
+        </div>
+        <p class="text-secondary mt-3">Established in 2018, Aegis Mark began with a single mission: to demystify complex corporate intellectual property filing structures and secure creative naming assets from infringement.</p>
+        <p class="text-secondary">Today, we represent a premier partnership of international trademark attorneys, litigation consultants, and cloud software engineers. We believe that securing a global mark shouldn't involve opaque processes, endless legal hours, or structural delays.</p>
+        
+        <div class="row g-4 mt-2">
+          <div class="col-sm-6">
+            <div class="glass-card p-4 h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="service-icon-box mb-3">
+                <i class="bi bi-compass-fill fs-3 text-warning"></i>
+              </div>
+              <h5 class="text-primary mb-2">Our Mission</h5>
+              <p class="text-secondary mb-0" style="font-size: 0.9rem;">To deliver seamless global brand immunity through accessible automated checks and elite litigation filing.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="glass-card p-4 h-100 d-flex flex-column align-items-center justify-content-center">
+              <div class="service-icon-box mb-3">
+                <i class="bi bi-eye-fill fs-3 text-warning"></i>
+              </div>
+              <h5 class="text-primary mb-2">Our Vision</h5>
+              <p class="text-secondary mb-0" style="font-size: 0.9rem;">To shape the next standard of digital IP licensing, shielding creative portfolios from copycat exploits.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 reveal-fade animation-delay-1 text-center">
+        <!-- SVG Graphic illustrating story -->
+        <svg width="450" height="350" viewBox="0 0 450 350" fill="none" xmlns="http://www.w3.org/2000/svg" class="img-fluid max-width-500">
+          <rect width="450" height="350" rx="20" fill="url(#aboutGrad)" stroke="#D4AF37" stroke-width="2"/>
+          <!-- Pillars of justice -->
+          <line x1="120" y1="280" x2="330" y2="280" stroke="#D4AF37" stroke-width="8" stroke-linecap="round"/>
+          <line x1="130" y1="120" x2="320" y2="120" stroke="#D4AF37" stroke-width="8" stroke-linecap="round"/>
+          <path d="M150 120 L150 280 M200 120 L200 280 M250 120 L250 280 M300 120 L300 280" stroke="#D4AF37" stroke-width="4" opacity="0.6"/>
+          <path d="M130 120 L225 70 L320 120" fill="rgba(212, 175, 55, 0.2)" stroke="#D4AF37" stroke-width="6" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="aboutGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0A192F"/>
+              <stop offset="100%" stop-color="#162A4A"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Trust Statistics -->
+  <section class="section-padding bg-light-offset" style="background-color: var(--bg-offset);">
+    <div class="container text-center">
+      <div class="row justify-content-center mb-5 reveal-fade">
+        <div class="col-lg-8">
+          <span class="text-uppercase fw-bold text-warning letter-spacing-1">Track Record</span>
+          <h2 class="mt-2 text-primary">Global Performance Metrics</h2>
+          <p class="text-secondary">We leverage structured legal systems to guarantee protection across major financial markets.</p>
+        </div>
+      </div>
+
+      <div class="row g-4 reveal-fade animation-delay-1">
+        <div class="col-md-3">
+          <div class="glass-card p-4 h-100">
+            <h3 class="text-warning fw-bold mb-1" style="font-size: 2.8rem;">99.4%</h3>
+            <p class="text-secondary mb-0">Registry Approval Rate</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="glass-card p-4 h-100">
+            <h3 class="text-warning fw-bold mb-1" style="font-size: 2.8rem;">150+</h3>
+            <p class="text-secondary mb-0">Madrid Protocol States</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="glass-card p-4 h-100">
+            <h3 class="text-warning fw-bold mb-1" style="font-size: 2.8rem;">8,200+</h3>
+            <p class="text-secondary mb-0">Active Brands Shielded</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="glass-card p-4 h-100">
+            <h3 class="text-warning fw-bold mb-1" style="font-size: 2.8rem;">24 Hr</h3>
+            <p class="text-secondary mb-0">Filing Submission Time</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Professional Profiles (Bios of Elite Attorneys) -->
+  <section class="container section-padding">
+    <div class="row justify-content-center text-center mb-5 reveal-fade">
+      <div class="col-lg-8">
+        <span class="text-uppercase fw-bold text-warning letter-spacing-1">Our Leadership</span>
+        <h2 class="mt-2 text-primary">Elite Intellectual Property Advisors</h2>
+        <p class="text-secondary">Direct support from certified global legal advisors specialized in corporate tech branding, registry disputes, and international litigation frameworks.</p>
+      </div>
+    </div>
+
+    <div class="row g-4 justify-content-center reveal-fade animation-delay-1">
+      <!-- Attorney 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="glass-card p-4 text-center h-100">
+          <div class="mx-auto mb-4 rounded-circle bg-primary-light d-flex align-items-center justify-content-center text-warning" style="width: 120px; height: 120px; font-size: 3rem; background-color: var(--bg-graphic-container);">
+            <i class="bi bi-person-fill-lock"></i>
+          </div>
+          <h4 class="text-primary mb-1">Victoria Sterling, Esq.</h4>
+          <span class="text-warning fw-bold d-block mb-3" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">Senior IP Counsel & Partner</span>
+          <p class="text-secondary mb-0" style="font-size: 0.95rem;">Former WIPO auditor with 14+ years experience in European registry opposition cases and luxury brand protection strategies.</p>
+        </div>
+      </div>
+      
+      <!-- Attorney 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="glass-card p-4 text-center h-100">
+          <div class="mx-auto mb-4 rounded-circle bg-primary-light d-flex align-items-center justify-content-center text-warning" style="width: 120px; height: 120px; font-size: 3rem; background-color: var(--bg-graphic-container);">
+            <i class="bi bi-person-workspace"></i>
+          </div>
+          <h4 class="text-primary mb-1">David Chen, LL.M.</h4>
+          <span class="text-warning fw-bold d-block mb-3" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">Director of Technology Filings</span>
+          <p class="text-secondary mb-0" style="font-size: 0.95rem;">Specializes in Class 09, 35, and 42 software algorithms, open-source compliance schemes, and cross-border digital disputes.</p>
+        </div>
+      </div>
+
+      <!-- Attorney 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="glass-card p-4 text-center h-100">
+          <div class="mx-auto mb-4 rounded-circle bg-primary-light d-flex align-items-center justify-content-center text-warning" style="width: 120px; height: 120px; font-size: 3rem; background-color: var(--bg-graphic-container);">
+            <i class="bi bi-shield-check"></i>
+          </div>
+          <h4 class="text-primary mb-1">Rebecca Vance</h4>
+          <span class="text-warning fw-bold d-block mb-3" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">Global Compliance Officer</span>
+          <p class="text-secondary mb-0" style="font-size: 0.95rem;">ManagesMadrid System portfolios for over 400 startup enterprises, coordinating cross-border opposition negotiations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Success Achievements Timeline -->
+  <section class="section-padding bg-light-offset" style="background-color: var(--bg-offset);">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5 reveal-fade">
+        <div class="col-lg-8">
+          <span class="text-uppercase fw-bold text-warning letter-spacing-1">Our Journey</span>
+          <h2 class="mt-2 text-primary">Timeline of Brand Achievements</h2>
+          <p class="text-secondary">Key milestones in our history as we grew to shield global innovators.</p>
+        </div>
+      </div>
+
+      <div class="timeline-container reveal-fade animation-delay-1">
+        <div class="timeline-line"></div>
+        
+        <!-- Milestone 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card text-end">
+            <div class="timeline-number">2018</div>
+            <h4 class="text-primary mb-2">Foundation & WIPO Integration</h4>
+            <p class="text-secondary mb-0">Agency founded. Integrated standard checking API interfaces with federal registry databases for instant class scanning.</p>
+          </div>
+          <div style="width: 45%;"></div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div style="width: 45%;"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-number">2021</div>
+            <h4 class="text-primary mb-2">Madrid System Automation</h4>
+            <p class="text-secondary mb-0">Released simultaneous global filing mechanisms, cutting international clearance processing loops by 60%.</p>
+          </div>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card text-end">
+            <div class="timeline-number">2024</div>
+            <h4 class="text-primary mb-2">10,000 active filings</h4>
+            <p class="text-secondary mb-0">Ranked top 10 independent legal IP consulting agencies in global trademark filing volume reports.</p>
+          </div>
+          <div style="width: 45%;"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Footer -->
+  <footer class="luxury-footer">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Left Brand Col -->
+        <div class="col-lg-4">
+          <a href="../index.html" class="footer-logo">
+            <svg class="logo-icon" width="28" height="28" viewBox="0 0 100 100" aria-hidden="true">
+              <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="none" stroke="currentColor" stroke-width="8"/>
+              <path d="M30,50 L50,30 L70,50 L50,70 Z" fill="currentColor"/>
+            </svg>
+            <span class="logo-text text-white">AEGIS<span class="text-warning">MARK</span></span>
+          </a>
+          <p class="footer-motto">Protecting your corporate legacy with premium intelligence, automation, and world-class IP consultation.</p>
+          <div class="footer-social-links">
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter Page"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram Account"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="footer-heading">Agency</h5>
+          <ul class="footer-links">
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./services.html">Our Services</a></li>
+            <li><a href="./pricing.html">Pricing Plans</a></li>
+            <li><a href="./gallery.html">Success Stories</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="footer-heading">Resources</h5>
+          <ul class="footer-links">
+            <li><a href="./service-details.html">Class Directories</a></li>
+            <li><a href="./coming-soon.html">Client Portal</a></li>
+            <li><a href="./404.html">Objection Handling</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="col-md-4 col-lg-4">
+          <h5 class="footer-heading">Intelligence Brief</h5>
+          <p class="text-light-50 mb-3" style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Subscribe to get critical trademark updates and legal policy summaries.</p>
+          <form class="needs-validation-premium">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Your Email Address" required style="border-radius: 50px 0 0 50px; border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); color: #FFF;">
+              <button class="btn btn-premium btn-premium-primary" type="submit" style="border-radius: 0 50px 50px 0; margin-left:-2px;">Join</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p>&copy; 2026 Aegis Mark Inc. All Rights Reserved. Designed for Luxury Brand Security.</p>
+        <div class="footer-bottom-links">
+          <a href="./coming-soon.html">Privacy Policy</a>
+          <a href="./coming-soon.html">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Bootstrap & Main Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

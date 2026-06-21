@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aegis Mark | Contact Our Intellectual Property Advisory</title>
+  <meta name="description" content="Get in touch with Aegis Mark. Consult with certified trademark attorneys, inquire about filing fees, or report brand infringement issues.">
+  
+  <!-- CSS Framework & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom Core Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- Sticky Fixed Header -->
+  <header class="sticky-header">
+    <div class="container d-flex align-items-center justify-content-between">
+      
+      <!-- Logo -->
+      <a href="../index.html" class="navbar-brand">
+        <svg class="logo-icon" width="32" height="32" viewBox="0 0 100 100" aria-hidden="true">
+          <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="none" stroke="currentColor" stroke-width="8"/>
+          <path d="M30,50 L50,30 L70,50 L50,70 Z" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">AEGIS<span>MARK</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="navbar-nav d-none d-lg-flex flex-row gap-2 align-items-center">
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Home
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+            <li><a class="dropdown-item" href="../index.html">Home 1</a></li>
+            <li><a class="dropdown-item" href="../pages/home-2.html">Home 2</a></li>
+          </ul>
+        </div>
+        <a class="nav-link" href="./about.html">About</a>
+        <a class="nav-link" href="./services.html">Services</a>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Check Availability
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="./check-availability.html">Availability Checker</a></li>
+            <li><a class="dropdown-item" href="./blog.html">Blog Page</a></li>
+            <li><a class="dropdown-item" href="./guides.html">Trademark Guides</a></li>
+            <li><a class="dropdown-item" href="./faqs.html">FAQs</a></li>
+            <li><a class="dropdown-item" href="./legal-updates.html">Legal Updates</a></li>
+          </ul>
+        </div>
+      <a class="nav-link" href="./pricing.html">Pricing</a>
+        
+        <a class="nav-link active" href="./contact.html">Contact</a>
+        </nav>
+
+      <!-- Global Actions -->
+      <div class="header-actions">
+        <button class="toggle-btn rtl-toggle-btn" aria-label="Switch Layout Direction">RTL</button>
+        <button class="toggle-btn theme-toggle-btn" aria-label="Switch Color Scheme">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+        <a href="./login.html" class="nav-login-btn">Login</a>
+      </div>
+
+      <!-- Mobile Controls -->
+      <div class="header-actions-mobile d-lg-none d-flex align-items-center">
+        <button class="toggle-btn rtl-toggle-btn" aria-label="Switch Layout Direction">RTL</button>
+        <button class="toggle-btn theme-toggle-btn" aria-label="Switch Color Scheme">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+        <button class="hamburger-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle Navigation Menu">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Menu -->
+  <div id="mobile-menu" class="fullscreen-menu" aria-hidden="true">
+    <nav class="fullscreen-nav">
+      <a href="#" class="mobile-dropdown-toggle d-flex align-items-center justify-content-center gap-2" data-bs-toggle="collapse" data-bs-target="#mobileHome" aria-expanded="false">
+        Home <i class="bi bi-chevron-down fs-4"></i>
+      </a>
+      <div class="collapse" id="mobileHome">
+        <div class="d-flex flex-column gap-2 mt-2" style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: var(--radius-md);">
+          <a href="../index.html" style="font-size: 1.5rem;">Home 1</a>
+          <a href="../pages/home-2.html" style="font-size: 1.5rem;">Home 2</a>
+        </div>
+      </div>
+      <a href="./about.html">About</a>
+      <a href="./services.html">Services</a>
+      <!-- Collapsible Check Availability Menu -->
+      <a href="#" class="mobile-dropdown-toggle d-flex align-items-center justify-content-center gap-2" data-bs-toggle="collapse" data-bs-target="#mobileCheckAvailability" aria-expanded="false">
+        Check Availability <i class="bi bi-chevron-down fs-4"></i>
+      </a>
+      <div class="collapse" id="mobileCheckAvailability">
+        <div class="d-flex flex-column gap-2 mt-2" style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: var(--radius-md);">
+          <a href="./check-availability.html" style="font-size: 1.5rem;">Availability Checker</a>
+          <a href="./blog.html" style="font-size: 1.5rem;">Blog Page</a>
+          <a href="./guides.html" style="font-size: 1.5rem;">Trademark Guides</a>
+          <a href="./faqs.html" style="font-size: 1.5rem;">FAQs</a>
+          <a href="./legal-updates.html" style="font-size: 1.5rem;">Legal Updates</a>
+        </div>
+      </div>
+      <a href="./pricing.html">Pricing</a>
+      
+      <a href="./contact.html" class="active">Contact</a>
+      <hr style="width: 50px; border-color: rgba(255, 255, 255, 0.2); margin: 20px auto;">
+      <a href="./login.html" class="btn btn-premium btn-premium-primary mt-2">Login</a>
+      <a href="./register.html" class="btn btn-premium btn-premium-secondary mt-2">Register</a>
+    </nav>
+  </div>
+
+  <!-- Inner Page Banner -->
+  <section class="section-padding bg-dark text-white text-center position-relative contact-hero-section" style="padding-top: 150px; padding-bottom: 80px;">
+    <div class="container reveal-fade">
+      <span class="text-uppercase fw-bold text-warning letter-spacing-1">Consultation Portal</span>
+      <h1 class="mt-2 text-white display-4 font-headings">Speak With Our Advisors</h1>
+      <p class="text-light-50 max-width-600 mx-auto fs-5" style="color: rgba(255, 255, 255, 0.75);">Initiate your brand compatibility search, clear registry audit items, or coordinate litigation defenses.</p>
+    </div>
+  </section>
+
+  <!-- Main Content Forms Section -->
+  <section class="container section-padding">
+    <div class="row g-5">
+      
+      <!-- Contact Form Column -->
+      <div class="col-lg-7 reveal-fade">
+        <div class="glass-card p-4 p-md-5">
+          <h2 class="text-primary mb-4">Request Free Consultation</h2>
+          <form class="needs-validation-premium" novalidate>
+            <div class="row">
+              <div class="col-md-6 form-group-premium">
+                <label for="name" class="form-label-premium">Full Name *</label>
+                <input type="text" id="name" class="form-control-premium" placeholder="e.g. John Doe" required>
+              </div>
+              <div class="col-md-6 form-group-premium">
+                <label for="email" class="form-label-premium">Email Address *</label>
+                <input type="email" id="email" class="form-control-premium" placeholder="e.g. john@company.com" required>
+              </div>
+            </div>
+            
+            <div class="form-group-premium">
+              <label for="brand-query" class="form-label-premium">Proposed Trademark Query</label>
+              <input type="text" id="brand-query" class="form-control-premium" placeholder="e.g. Aegis Mark Inc.">
+            </div>
+
+            <div class="form-group-premium">
+              <label for="reason" class="form-label-premium">Inquiry Scope *</label>
+              <select id="reason" class="form-control-premium" required>
+                <option value="">Select legal scope...</option>
+                <option value="filing">New Trademark Registration</option>
+                <option value="search">Clearance Compatibility Search</option>
+                <option value="objection">Objection & Office Actions Response</option>
+                <option value="consult">Corporate IP Consultation</option>
+              </select>
+            </div>
+
+            <div class="form-group-premium">
+              <label for="message" class="form-label-premium">Message Body *</label>
+              <textarea id="message" class="form-control-premium" rows="5" placeholder="Briefly describe your naming assets and industry sector..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-premium btn-premium-primary w-100">Send Inquiry Brief</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Business Details Column -->
+      <div class="col-lg-5 reveal-fade animation-delay-1">
+        <div class="h-100 d-flex flex-column justify-content-between">
+          
+          <!-- Detail Card -->
+          <div class="glass-card p-4 mb-4">
+            <h4 class="text-primary mb-4">Agency Headquarters</h4>
+            <ul class="list-unstyled mb-0 contact-info-list" style="line-height: 2.2;">
+              <li class="d-flex align-items-start gap-3 mb-3">
+                <i class="bi bi-geo-alt-fill text-warning fs-5"></i>
+                <div>
+                  <h6 class="text-primary mb-1">Corporate Address</h6>
+                  <p class="text-secondary mb-0">100 Luxury Avenue, Suite 500, New York, NY 10001</p>
+                </div>
+              </li>
+              <li class="d-flex align-items-start gap-3 mb-3">
+                <i class="bi bi-telephone-fill text-warning fs-5"></i>
+                <div>
+                  <h6 class="text-primary mb-1">Telephone Hotlines</h6>
+                  <a href="tel:+1800555MARK" class="text-secondary">+1-800-555-MARK</a><br>
+                  <a href="tel:+12125550299" class="text-secondary">+1 (212) 555-0299 (International)</a>
+                </div>
+              </li>
+              <li class="d-flex align-items-start gap-3 mb-3">
+                <i class="bi bi-envelope-fill text-warning fs-5"></i>
+                <div>
+                  <h6 class="text-primary mb-1">Email Inquiries</h6>
+                  <a href="mailto:counsel@premium-trademark.com" class="text-secondary">counsel@premium-trademark.com</a>
+                </div>
+              </li>
+              <li class="d-flex align-items-start gap-3">
+                <i class="bi bi-clock-fill text-warning fs-5"></i>
+                <div>
+                  <h6 class="text-primary mb-1">Operational Hours</h6>
+                  <p class="text-secondary mb-0">Monday - Friday: 09:00 AM - 06:00 PM EST</p>
+                  <div class="mt-3 d-flex gap-2 justify-content-center">
+                    <a href="#" class="social-icon-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="social-icon-btn" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="social-icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Interactive Google Map -->
+          <div class="glass-card p-0 mb-4 position-relative" style="height: 250px; overflow: hidden;">
+            <iframe class="w-100 h-100 border-0 contact-map-iframe" 
+              src="https://maps.google.com/maps?q=100%20Luxury%20Avenue%2C%20Suite%20500%2C%20New%20York%2C%20NY%2010001&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              allowfullscreen="" 
+              loading="lazy"></iframe>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Premium Footer -->
+  <footer class="luxury-footer">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Left Brand Col -->
+        <div class="col-lg-4">
+          <a href="../index.html" class="footer-logo">
+            <svg class="logo-icon" width="28" height="28" viewBox="0 0 100 100" aria-hidden="true">
+              <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="none" stroke="currentColor" stroke-width="8"/>
+              <path d="M30,50 L50,30 L70,50 L50,70 Z" fill="currentColor"/>
+            </svg>
+            <span class="logo-text text-white">AEGIS<span class="text-warning">MARK</span></span>
+          </a>
+          <p class="footer-motto">Protecting your corporate legacy with premium intelligence, automation, and world-class IP consultation.</p>
+          <div class="footer-social-links">
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter Page"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram Account"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="footer-heading">Agency</h5>
+          <ul class="footer-links">
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./services.html">Our Services</a></li>
+            <li><a href="./pricing.html">Pricing Plans</a></li>
+            <li><a href="./gallery.html">Success Stories</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="footer-heading">Resources</h5>
+          <ul class="footer-links">
+            <li><a href="./service-details.html">Class Directories</a></li>
+            <li><a href="./coming-soon.html">Client Portal</a></li>
+            <li><a href="./404.html">Objection Handling</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="col-md-4 col-lg-4">
+          <h5 class="footer-heading">Intelligence Brief</h5>
+          <p class="text-light-50 mb-3" style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Subscribe to get critical trademark updates and legal policy summaries.</p>
+          <form class="needs-validation-premium">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Your Email Address" required style="border-radius: 50px 0 0 50px; border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); color: #FFF;">
+              <button class="btn btn-premium btn-premium-primary" type="submit" style="border-radius: 0 50px 50px 0; margin-left:-2px;">Join</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p>&copy; 2026 Aegis Mark Inc. All Rights Reserved. Designed for Luxury Brand Security.</p>
+        <div class="footer-bottom-links">
+          <a href="./coming-soon.html">Privacy Policy</a>
+          <a href="./coming-soon.html">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Bootstrap & Main Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

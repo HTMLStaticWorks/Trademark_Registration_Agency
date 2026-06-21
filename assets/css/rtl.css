@@ -1,0 +1,214 @@
+/* 
+   Trademark Registration Agency - RTL Support Overrides
+   Applied when <html dir="rtl"> is active
+*/
+
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Base resets for lists & positioning */
+[dir="rtl"] th, 
+[dir="rtl"] td,
+[dir="rtl"] .text-start {
+  text-align: right !important;
+}
+
+[dir="rtl"] .text-end {
+  text-align: left !important;
+}
+
+[dir="rtl"] .ms-auto {
+  margin-right: auto !important;
+  margin-left: 0 !important;
+}
+
+[dir="rtl"] .me-auto {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+/* Header & Toggle buttons position shifts */
+[dir="rtl"] .auth-header-toggles {
+  right: auto;
+  left: 30px;
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .auth-header-toggles {
+    left: 15px;
+  }
+}
+
+[dir="rtl"] .navbar-nav {
+  padding-right: 0;
+}
+
+[dir="rtl"] .navbar-nav .nav-link::after {
+  left: auto;
+  right: 16px;
+}
+
+/* Service item checklist icon alignment */
+[dir="rtl"] .service-features-list li {
+  padding-left: 0;
+  padding-right: 25px;
+}
+
+[dir="rtl"] .service-features-list li::before {
+  left: auto;
+  right: 0;
+}
+
+/* Back to top button position shift */
+[dir="rtl"] .back-to-top {
+  right: auto;
+  left: 30px;
+}
+
+/* Interactive Trademark availability checker adjustments */
+[dir="rtl"] .search-input-group {
+  padding: 8px 24px 8px 8px;
+}
+
+[dir="rtl"] .search-class-select {
+  border-right: none;
+  border-left: 1px solid rgba(10, 25, 47, 0.1);
+}
+
+[dir="rtl"] [data-theme="dark"] .search-class-select {
+  border-left-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Timeline alignment for RTL */
+@media (min-width: 769px) {
+  [dir="rtl"] .timeline-item:nth-child(even) {
+    flex-direction: row;
+  }
+  
+  [dir="rtl"] .timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  
+  [dir="rtl"] .timeline-content {
+    text-align: right;
+  }
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .timeline-line {
+    left: auto;
+    right: 20px;
+  }
+  
+  [dir="rtl"] .timeline-dot {
+    left: auto;
+    right: 20px;
+  }
+  
+  [dir="rtl"] .timeline-content {
+    margin-left: 0;
+    margin-right: 50px;
+    text-align: right !important;
+  }
+}
+
+/* Forms & Password Visibility Icon positioning */
+[dir="rtl"] .password-toggle-icon {
+  right: auto;
+  left: 20px;
+}
+
+/* Margin and Padding Helpers */
+[dir="rtl"] .pe-2 {
+  padding-left: 0.5rem !important;
+  padding-right: 0 !important;
+}
+
+[dir="rtl"] .ps-2 {
+  padding-right: 0.5rem !important;
+  padding-left: 0 !important;
+}
+
+[dir="rtl"] .me-2 {
+  margin-left: 0.5rem !important;
+  margin-right: 0 !important;
+}
+
+[dir="rtl"] .ms-2 {
+  margin-right: 0.5rem !important;
+  margin-left: 0 !important;
+}
+
+/* Custom alignment for footer headings */
+[dir="rtl"] .footer-heading::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .footer-links a:hover {
+  padding-left: 0;
+  padding-right: 5px;
+}
+
+[dir="rtl"] .footer-bottom-links {
+  justify-content: flex-start;
+}
+
+/* Icons & arrows flip */
+[dir="rtl"] .bi-arrow-right::before {
+  content: "\f135"; /* Flip Bootstrap Icons arrow direction */
+}
+
+/* Floating labels and badges */
+[dir="rtl"] .floating-badge-1 {
+  right: auto;
+  left: -5%;
+}
+
+[dir="rtl"] .floating-badge-2 {
+  left: auto;
+  right: -5%;
+}
+
+@media (max-width: 576px) {
+  [dir="rtl"] .floating-badge-1 {
+    right: auto !important;
+    left: 5% !important;
+  }
+  [dir="rtl"] .floating-badge-2 {
+    left: auto !important;
+    right: 5% !important;
+  }
+}
+
+/* Fix English typography elements bidi punctuation and alignment in RTL mode */
+[dir="rtl"] h1, 
+[dir="rtl"] h2, 
+[dir="rtl"] h3, 
+[dir="rtl"] h4, 
+[dir="rtl"] h5, 
+[dir="rtl"] h6, 
+[dir="rtl"] p, 
+[dir="rtl"] a, 
+[dir="rtl"] li, 
+[dir="rtl"] span:not(.logo-icon):not(.bi) {
+  unicode-bidi: plaintext;
+}
+
+/* Fix English testimonials quote direction and alignment in RTL mode */
+[dir="rtl"] .carousel-item p {
+  direction: ltr !important;
+  text-align: center !important;
+}
+
+/* Fix footer newsletter input group styling in RTL */
+[dir="rtl"] .luxury-footer .input-group .form-control {
+  border-radius: 0 50px 50px 0 !important;
+}
+
+[dir="rtl"] .luxury-footer .input-group .btn-premium {
+  border-radius: 50px 0 0 50px !important;
+  margin-left: 0 !important;
+  margin-right: -2px !important;
+}

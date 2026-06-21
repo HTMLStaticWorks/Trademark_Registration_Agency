@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aegis Mark | Legal & Regulatory IP Updates</title>
+  <meta name="description" content="Stay informed with real-time international trademark law updates, WIPO fee schedules, Madrid System expansions, and USPTO policies.">
+  
+  <!-- CSS Framework & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom Core Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- Sticky Fixed Header -->
+  <header class="sticky-header">
+    <div class="container d-flex align-items-center justify-content-between">
+      
+      <!-- Logo -->
+      <a href="../index.html" class="navbar-brand">
+        <svg class="logo-icon" width="32" height="32" viewBox="0 0 100 100" aria-hidden="true">
+          <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="none" stroke="currentColor" stroke-width="8"/>
+          <path d="M30,50 L50,30 L70,50 L50,70 Z" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">AEGIS<span>MARK</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="navbar-nav d-none d-lg-flex flex-row gap-2 align-items-center">
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Home
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+            <li><a class="dropdown-item" href="../index.html">Home 1</a></li>
+            <li><a class="dropdown-item" href="../pages/home-2.html">Home 2</a></li>
+          </ul>
+        </div>
+        <a class="nav-link" href="./about.html">About</a>
+        <a class="nav-link" href="./services.html">Services</a>
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Check Availability
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="./check-availability.html">Availability Checker</a></li>
+            <li><a class="dropdown-item" href="./blog.html">Blog Page</a></li>
+            <li><a class="dropdown-item" href="./guides.html">Trademark Guides</a></li>
+            <li><a class="dropdown-item" href="./faqs.html">FAQs</a></li>
+            <li><a class="dropdown-item active" href="./legal-updates.html">Legal Updates</a></li>
+          </ul>
+        </div>
+      <a class="nav-link" href="./pricing.html">Pricing</a>
+        
+        <a class="nav-link" href="./contact.html">Contact</a>
+        </nav>
+
+      <!-- Global Actions -->
+      <div class="header-actions">
+        <button class="toggle-btn rtl-toggle-btn" aria-label="Switch Direction">RTL</button>
+        <button class="toggle-btn theme-toggle-btn" aria-label="Switch Theme">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+        <a href="./login.html" class="nav-login-btn">Login</a>
+      </div>
+
+      <!-- Mobile Controls -->
+      <div class="header-actions-mobile d-lg-none d-flex align-items-center">
+        <button class="toggle-btn rtl-toggle-btn" aria-label="Switch Layout Direction">RTL</button>
+        <button class="toggle-btn theme-toggle-btn" aria-label="Switch Theme">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+        <button class="hamburger-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle Navigation">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Fullscreen Mobile Navigation Menu -->
+  <div id="mobile-menu" class="fullscreen-menu" aria-hidden="true">
+    <nav class="fullscreen-nav">
+      <a href="#" class="mobile-dropdown-toggle d-flex align-items-center justify-content-center gap-2" data-bs-toggle="collapse" data-bs-target="#mobileHome" aria-expanded="false">
+        Home <i class="bi bi-chevron-down fs-4"></i>
+      </a>
+      <div class="collapse" id="mobileHome">
+        <div class="d-flex flex-column gap-2 mt-2" style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: var(--radius-md);">
+          <a href="../index.html" style="font-size: 1.5rem;">Home 1</a>
+          <a href="../pages/home-2.html" style="font-size: 1.5rem;">Home 2</a>
+        </div>
+      </div>
+      <a href="./about.html">About</a>
+      <a href="./services.html">Services</a>
+      <!-- Collapsible Check Availability Menu -->
+      <a href="#" class="mobile-dropdown-toggle d-flex align-items-center justify-content-center gap-2 active" data-bs-toggle="collapse" data-bs-target="#mobileCheckAvailability" aria-expanded="true">
+        Check Availability <i class="bi bi-chevron-down fs-4"></i>
+      </a>
+      <div class="collapse show" id="mobileCheckAvailability">
+        <div class="d-flex flex-column gap-2 mt-2" style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: var(--radius-md);">
+          <a href="./check-availability.html" style="font-size: 1.5rem;">Availability Checker</a>
+          <a href="./blog.html" style="font-size: 1.5rem;">Blog Page</a>
+          <a href="./guides.html" style="font-size: 1.5rem;">Trademark Guides</a>
+          <a href="./faqs.html" style="font-size: 1.5rem;">FAQs</a>
+          <a href="./legal-updates.html" class="active" style="font-size: 1.5rem;">Legal Updates</a>
+        </div>
+      </div>
+      <a href="./pricing.html">Pricing</a>
+      
+      <a href="./contact.html">Contact</a>
+      <hr style="width: 50px; border-color: rgba(255, 255, 255, 0.2); margin: 20px auto;">
+      <a href="./login.html" class="btn btn-premium btn-premium-primary mt-2">Login</a>
+      <a href="./register.html" class="btn btn-premium btn-premium-secondary mt-2">Register</a>
+    </nav>
+  </div>
+
+  <!-- Hero Banner -->
+  <section class="section-padding bg-dark text-white text-center position-relative legal-hero-section" style="padding-top: 150px; padding-bottom: 80px;">
+    <div class="container reveal-fade">
+      <span class="text-uppercase fw-bold text-warning letter-spacing-1">Regulatory Intelligence</span>
+      <h1 class="mt-2 text-white display-4 font-headings">Legal & Policy Updates</h1>
+      <p class="text-light-50 max-width-600 mx-auto fs-5" style="color: rgba(255, 255, 255, 0.75);">Stay informed with real-time shifts in national registries, Madrid system agreements, and patent office actions.</p>
+    </div>
+  </section>
+
+  <!-- Legal Updates Feed -->
+  <section class="container py-5">
+    <div class="row g-5">
+      
+      <!-- Left: Updates Feed -->
+      <div class="col-lg-8">
+        
+        <!-- Feed Card 1 -->
+        <div class="glass-card p-4 mb-4 reveal-fade">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="badge bg-warning text-dark px-3 py-2" style="border-radius: var(--radius-pill); font-weight:600;">WIPO POLICY</span>
+            <small class="text-muted"><i class="bi bi-clock me-1"></i> June 20, 2026</small>
+          </div>
+          <h3 class="text-primary font-headings mb-2">WIPO Base Fee Adjustments for International Madrid Applications</h3>
+          <p class="text-secondary">The World Intellectual Property Organization (WIPO) has announced standard fee index modifications starting August 2026. The basic application fee for marks in black-and-white will see an adjustment to align with administrative costs. Make sure to run your renewal projections against the new schedule.</p>
+          <a href="./coming-soon.html" class="text-warning fw-bold d-inline-flex align-items-center gap-1 mt-2">View Fee Table <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <!-- Feed Card 2 -->
+        <div class="glass-card p-4 mb-4 reveal-fade">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="badge bg-secondary-light text-dark px-3 py-2" style="border-radius: var(--radius-pill); font-weight:600;">USPTO RULING</span>
+            <small class="text-muted"><i class="bi bi-clock me-1"></i> June 05, 2026</small>
+          </div>
+          <h3 class="text-primary font-headings mb-2">USPTO Releases Guidelines Regarding AI-Generated Logos</h3>
+          <p class="text-secondary">New federal guidelines confirm that design files containing purely machine-generated graphics without human modification lack the distinctiveness required for statutory trademark shielding. A modification audit is mandatory to ensure logo asset distinctiveness before registry submission.</p>
+          <a href="./coming-soon.html" class="text-warning fw-bold d-inline-flex align-items-center gap-1 mt-2">Read Guidelines <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <!-- Feed Card 3 -->
+        <div class="glass-card p-4 mb-4 reveal-fade">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="badge bg-secondary-light text-dark px-3 py-2" style="border-radius: var(--radius-pill); font-weight:600;">EUIPO ACTION</span>
+            <small class="text-muted"><i class="bi bi-clock me-1"></i> May 24, 2026</small>
+          </div>
+          <h3 class="text-primary font-headings mb-2">Spain-Latin America Cross-Border Fast-Track Filing Active</h3>
+          <p class="text-secondary">A new bilateral agreement enables faster cross-border brand auditing and processing between Spain (SPTO) and major South American IP registries. Startups filing in Spanish jurisdictions can expect clearance times to decrease by 45% under the new protocol.</p>
+          <a href="./coming-soon.html" class="text-warning fw-bold d-inline-flex align-items-center gap-1 mt-2">Explore Protocol <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+      </div>
+
+      <!-- Right: Sidebar widgets -->
+      <div class="col-lg-4">
+        
+        <!-- Subscription Widget -->
+        <div class="glass-card p-4 mb-4 reveal-fade" style="border-color: rgba(212, 175, 55, 0.25);">
+          <h4 class="text-primary font-headings mb-3"><i class="bi bi-envelope-at text-warning me-2"></i> Policy Briefs</h4>
+          <p class="text-secondary" style="font-size: 0.9rem;">Join over 2,500 legal counsel officers receiving our weekly summaries of international trademark disputes.</p>
+          
+          <form class="needs-validation-premium mt-3">
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Email Address" required style="border-radius: var(--radius-pill); border-color: var(--border-color); background: rgba(0,0,0,0.02);">
+            </div>
+            <button class="btn btn-premium btn-premium-primary w-100" type="submit">Subscribe</button>
+          </form>
+        </div>
+
+        <!-- Treaty Schedules -->
+        <div class="glass-card p-4 reveal-fade">
+          <h4 class="text-primary font-headings mb-3"><i class="bi bi-globe-americas text-warning me-2"></i> Madrid Protocol Schedule</h4>
+          <div class="list-group list-group-flush" style="background: transparent;">
+            <div class="list-group-item px-0 py-2 border-0 border-bottom bg-transparent" style="font-size: 0.85rem; color: var(--text-secondary);">
+              <strong class="text-primary">Ecuador (July 2026):</strong> Joining Madrid System to enable streamlined Andes protection.
+            </div>
+            <div class="list-group-item px-0 py-2 border-0 border-bottom bg-transparent" style="font-size: 0.85rem; color: var(--text-secondary);">
+              <strong class="text-primary">Saudi Arabia (Active):</strong> Madrid filings fully cleared under latest Arabic translation protocols.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Premium Footer -->
+  <footer class="luxury-footer">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Left Brand Col -->
+        <div class="col-lg-4">
+          <a href="../index.html" class="footer-logo">
+            <svg class="logo-icon" width="28" height="28" viewBox="0 0 100 100" aria-hidden="true">
+              <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="none" stroke="currentColor" stroke-width="8"/>
+              <path d="M30,50 L50,30 L70,50 L50,70 Z" fill="currentColor"/>
+            </svg>
+            <span class="logo-text text-white">AEGIS<span class="text-warning">MARK</span></span>
+          </a>
+          <p class="footer-motto">Protecting your corporate legacy with premium intelligence, automation, and world-class IP consultation.</p>
+          <div class="footer-social-links">
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter Page"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram Account"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="footer-heading">Agency</h5>
+          <ul class="footer-links">
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./services.html">Our Services</a></li>
+            <li><a href="./pricing.html">Pricing Plans</a></li>
+            <li><a href="./gallery.html">Success Stories</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="col-md-4 col-lg-2">
+          <h5 class="footer-heading">Resources</h5>
+          <ul class="footer-links">
+            <li><a href="./blog.html">Educational Blog</a></li>
+            <li><a href="./service-details.html">Class Directories</a></li>
+            <li><a href="./coming-soon.html">Client Portal</a></li>
+            <li><a href="./404.html">Objection Handling</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="col-md-4 col-lg-4">
+          <h5 class="footer-heading">Intelligence Brief</h5>
+          <p class="text-light-50 mb-3" style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Subscribe to get critical trademark updates and legal policy summaries.</p>
+          <form class="needs-validation-premium">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Your Email Address" required style="border-radius: 50px 0 0 50px; border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); color: #FFF;">
+              <button class="btn btn-premium btn-premium-primary" type="submit" style="border-radius: 0 50px 50px 0; margin-left:-2px;">Join</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p>&copy; 2026 Aegis Mark Inc. All Rights Reserved. Designed for Luxury Brand Security.</p>
+        <div class="footer-bottom-links">
+          <a href="./coming-soon.html">Privacy Policy</a>
+          <a href="./coming-soon.html">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Bootstrap & Main Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://premium-trademark-agency.com/sitemap.xml
