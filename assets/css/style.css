@@ -691,6 +691,12 @@ html {
   align-items: center;
 }
 
+.hero-illustration-container {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
 .hero-illustration {
   width: 100%;
   max-width: 500px;
@@ -1854,10 +1860,13 @@ html {
   display: flex !important; /* Keep its internal layout flex */
 }
 
-/* Prevent auto margins on icons inside inline links to keep text and icon together */
-.glass-card a i.bi, .pricing-card a i.bi, .auth-card a i.bi, .auth-social-btn i.bi {
+/* Prevent auto margins on icons inside inline links, buttons, and checklists to keep text and icon together/aligned */
+.glass-card a i.bi, .pricing-card a i.bi, .auth-card a i.bi, .auth-social-btn i.bi,
+.glass-card button i.bi, .pricing-card button i.bi, .auth-card button i.bi,
+.glass-card .compliance-checklist i.bi {
   margin-left: 0 !important;
   margin-right: 0 !important;
+  display: inline-block !important;
 }
 
 /* Inner Page Hero Backgrounds */
@@ -1936,14 +1945,22 @@ html {
   margin-left: 8px !important;
 }
 
-/* Fix Contact Info List Alignment inside Glass Cards */
+/* Fix Contact Info & Checklist Alignments inside Glass Cards */
 .glass-card .contact-info-list,
-.glass-card .contact-info-list * {
+.glass-card .contact-info-list *,
+.glass-card .service-features-list,
+.glass-card .service-features-list *,
+.glass-card .compliance-checklist,
+.glass-card .compliance-checklist * {
   text-align: left !important;
 }
 
 [dir="rtl"] .glass-card .contact-info-list,
-[dir="rtl"] .glass-card .contact-info-list * {
+[dir="rtl"] .glass-card .contact-info-list *,
+[dir="rtl"] .glass-card .service-features-list,
+[dir="rtl"] .glass-card .service-features-list *,
+[dir="rtl"] .glass-card .compliance-checklist,
+[dir="rtl"] .glass-card .compliance-checklist * {
   text-align: right !important;
 }
 
@@ -1975,3 +1992,29 @@ html {
   text-shadow: 0 0 8px rgba(255, 193, 7, 0.4);
   transform: translateY(-1px);
 }
+
+/* Optimize Header / Navbar Spacing for 1024px / Landscape Tablet Viewports */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar-nav .nav-link {
+    padding: 8px 8px !important;
+    font-size: 0.9rem;
+  }
+  .navbar-nav .nav-link::after {
+    left: 8px !important;
+    right: 8px !important;
+  }
+  .navbar-nav {
+    gap: 5px !important;
+  }
+  .header-actions {
+    gap: 10px;
+  }
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .logo-icon {
+    width: 26px !important;
+    height: 26px !important;
+  }
+}
+

@@ -82,14 +82,6 @@
 
 /* Timeline alignment for RTL */
 @media (min-width: 769px) {
-  [dir="rtl"] .timeline-item:nth-child(even) {
-    flex-direction: row;
-  }
-  
-  [dir="rtl"] .timeline-item:nth-child(odd) {
-    flex-direction: row-reverse;
-  }
-  
   [dir="rtl"] .timeline-content {
     text-align: right;
   }
