@@ -307,16 +307,31 @@ html {
 
 .logo-text {
   letter-spacing: 0.05em;
+  color: var(--secondary-color) !important;
+  transition: var(--transition-normal);
 }
 
+.logo-text.text-white,
 .navbar-brand .logo-text,
-.footer-logo .logo-text {
-  color: #000000 !important;
-}
-
+.footer-logo .logo-text,
+.auth-logo .logo-text,
 .logo-text span,
 .logo-text .text-warning {
   color: var(--secondary-color) !important;
+  transition: var(--transition-normal);
+}
+
+/* Brand and Logo Hover Effects */
+.navbar-brand,
+.footer-logo,
+.auth-logo {
+  transition: var(--transition-normal);
+}
+
+.navbar-brand:hover,
+.footer-logo:hover,
+.auth-logo:hover {
+  opacity: 0.8;
 }
 
 .navbar-nav .nav-link {
@@ -627,6 +642,7 @@ html {
 }
 
 .fullscreen-nav .btn-premium-secondary {
+  display: none !important;
   color: var(--text-light) !important;
   border-color: var(--text-light) !important;
 }
@@ -819,6 +835,11 @@ html {
   padding: 8px 8px 8px 24px;
   align-items: center;
   transition: var(--transition-fast);
+}
+
+.search-input-group.search-spaced i.bi {
+  margin-right: 12px !important;
+  margin-left: 0 !important;
 }
 
 .search-input-group:focus-within {
@@ -1061,7 +1082,6 @@ html {
 @media (max-width: 1024px) {
   .pricing-card.popular {
     transform: none;
-    margin-top: 20px;
   }
 }
 
@@ -1379,6 +1399,21 @@ html {
   color: var(--text-muted);
 }
 
+select.form-control-premium {
+  padding-right: 40px !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%231C2331' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 15px center !important;
+  background-size: 16px 12px !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+[data-theme="dark"] select.form-control-premium {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23F8FAFC' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+}
+
 /* Auth Cards Styling (No Header/Footer) */
 .auth-page {
   min-height: 100vh;
@@ -1624,7 +1659,7 @@ html {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .sticky-header .container {
     padding-left: 20px !important;
     padding-right: 20px !important;
@@ -1677,7 +1712,7 @@ html {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1025px) {
   .header-actions-mobile {
     display: none !important;
   }
@@ -1731,6 +1766,11 @@ html {
     gap: 15px;
   }
   
+  .search-input-group.search-spaced i.bi {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  
   .search-input-group input {
     font-size: 1rem;
     text-align: center;
@@ -1778,6 +1818,10 @@ html {
     justify-content: center !important;
     align-items: center !important;
     text-align: center !important;
+  }
+
+  .btn-premium.w-100 {
+    max-width: none !important;
   }
 
   .luxury-footer .input-group .btn-premium {
@@ -2018,7 +2062,7 @@ html {
 }
 
 /* Optimize Header / Navbar Spacing for 1024px / Landscape Tablet Viewports */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 1025px) and (max-width: 1199px) {
   .navbar-nav .nav-link {
     padding: 8px 8px !important;
     font-size: 0.9rem;

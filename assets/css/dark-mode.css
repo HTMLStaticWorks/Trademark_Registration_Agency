@@ -64,9 +64,7 @@
 }
 
 [data-theme="dark"] .navbar-brand,
-[data-theme="dark"] .navbar-brand .logo-text,
-[data-theme="dark"] .footer-logo,
-[data-theme="dark"] .footer-logo .logo-text {
+[data-theme="dark"] .footer-logo {
   color: #FFFFFF !important;
 }
 
@@ -319,8 +317,7 @@
 }
 
 /* Dark Mode Override for Auth Card Logo */
-[data-theme="dark"] .auth-logo,
-[data-theme="dark"] .auth-logo .logo-text {
+[data-theme="dark"] .auth-logo {
   color: #FFFFFF !important;
 }
 

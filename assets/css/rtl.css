@@ -183,10 +183,9 @@
 [dir="rtl"] h6, 
 [dir="rtl"] p, 
 [dir="rtl"] a, 
-[dir="rtl"] li, 
 [dir="rtl"] button,
 [dir="rtl"] span:not(.logo-icon):not(.bi) {
-  unicode-bidi: plaintext;
+  direction: ltr;
 }
 
 /* Fix English testimonials quote direction and alignment in RTL mode */
@@ -253,6 +252,17 @@
 
 [dir="rtl"] .form-check.form-switch .form-check-input {
   margin-right: -2.5em !important;
+}
+
+/* Align service page tab checklist items in RTL mode */
+[dir="rtl"] .tab-pane li {
+  direction: ltr !important;
+}
+
+/* Align search input group icon margin in RTL mode */
+[dir="rtl"] .search-input-group.search-spaced i.bi {
+  margin-left: 12px !important;
+  margin-right: 0 !important;
 }
 
 
