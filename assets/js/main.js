@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initBackToTop();
   initPricingToggle();
+  initJurisdictionTabs();
+  initBrandEstimator();
 });
 
 /* ==========================================
@@ -277,13 +279,25 @@ function initFormValidations() {
       inputs.forEach(input => {
         // Reset errors
         input.classList.remove('is-invalid');
-        const feedback = input.nextElementSibling;
+        
+        let feedback = input.nextElementSibling;
+        if (input.type === 'checkbox' && input.closest('.form-check')) {
+          const container = input.closest('.form-check');
+          if (container.nextElementSibling && container.nextElementSibling.classList.contains('invalid-feedback')) {
+            feedback = container.nextElementSibling;
+          }
+        }
+        
         if (feedback && feedback.classList.contains('invalid-feedback')) {
           feedback.remove();
         }
 
         // Check validation state
-        if (!input.value.trim()) {
+        if (input.type === 'checkbox' && !input.checked) {
+          isValid = false;
+          input.classList.add('is-invalid');
+          createFeedback(input, 'You must agree to the Terms & Conditions.');
+        } else if (!input.value.trim()) {
           isValid = false;
           input.classList.add('is-invalid');
           createFeedback(input, 'This field is required.');
@@ -329,8 +343,12 @@ function createFeedback(input, msg) {
   const div = document.createElement('div');
   div.className = 'invalid-feedback';
   div.innerText = msg;
-  // If it has a password toggle overlay, insert before the wrapper ends
-  if (input.classList.contains('form-control-premium') && input.parentElement.classList.contains('auth-input-wrapper')) {
+  
+  if (input.type === 'checkbox' && input.closest('.form-check')) {
+    const container = input.closest('.form-check');
+    if (container.nextElementSibling && container.nextElementSibling.classList.contains('invalid-feedback')) return;
+    container.parentNode.insertBefore(div, container.nextSibling);
+  } else if (input.classList.contains('form-control-premium') && input.parentElement.classList.contains('auth-input-wrapper')) {
     input.parentElement.appendChild(div);
   } else {
     input.parentNode.insertBefore(div, input.nextSibling);
@@ -422,4 +440,179 @@ function initPricingToggle() {
       }, 150);
     });
   });
+}
+
+/* ==========================================
+   11. Global Coverage Registry Tabs
+   ========================================== */
+const jurisdictionData = {
+  us: {
+    registry: "USPTO (United States Patent and Trademark Office)",
+    speed: "8-10 Months",
+    success: "94.2%",
+    cost: "$250 per Nice class (USPTO government filing fee)",
+    status: "Direct API Integration Active"
+  },
+  eu: {
+    registry: "EUIPO (European Union Intellectual Property Office)",
+    speed: "4-5 Months",
+    success: "96.8%",
+    cost: "€850 base fee (covers 1st class; additional fees apply)",
+    status: "Direct API Integration Active"
+  },
+  uk: {
+    registry: "UKIPO (United Kingdom Intellectual Property Office)",
+    speed: "3-4 Months",
+    success: "98.1%",
+    cost: "£170 base fee (covers 1st class; +£50 per extra class)",
+    status: "Direct API Integration Active"
+  },
+  ap: {
+    registry: "WIPO / Madrid Protocol (Asia-Pacific Registries)",
+    speed: "12-18 Months",
+    success: "89.5%",
+    cost: "Varies by jurisdiction and WIPO basic fees",
+    status: "Madrid System Gateway Active"
+  }
+};
+
+function initJurisdictionTabs() {
+  const tabButtons = document.querySelectorAll('.jurisdiction-tab-btn');
+  if (tabButtons.length === 0) return;
+
+  const registryText = document.getElementById('region-registry-name');
+  const speedText = document.getElementById('region-speed');
+  const successText = document.getElementById('region-success');
+  const costText = document.getElementById('region-cost');
+  const statusText = document.getElementById('region-status');
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Remove active class from all buttons
+      tabButtons.forEach(b => b.classList.remove('active'));
+      // Add active class to clicked button
+      btn.classList.add('active');
+
+      const regionKey = btn.getAttribute('data-region');
+      const data = jurisdictionData[regionKey];
+      
+      if (!data) return;
+
+      // Animate update
+      const detailContainer = document.querySelector('.jurisdiction-detail-card');
+      if (detailContainer) {
+        detailContainer.style.opacity = '0.4';
+        detailContainer.style.transform = 'translateY(5px)';
+        detailContainer.style.transition = 'all 0.2s ease';
+        
+        setTimeout(() => {
+          if (registryText) registryText.textContent = data.registry;
+          if (speedText) speedText.textContent = data.speed;
+          if (successText) successText.textContent = data.success;
+          if (costText) costText.textContent = data.cost;
+          if (statusText) statusText.textContent = data.status;
+          
+          detailContainer.style.opacity = '1';
+          detailContainer.style.transform = 'translateY(0)';
+        }, 150);
+      }
+    });
+  });
+}
+
+/* ==========================================
+   12. Brand Security & Risk Estimator
+   ========================================== */
+function initBrandEstimator() {
+  const scaleSelect = document.getElementById('estimator-scale');
+  const classSlider = document.getElementById('estimator-classes');
+  const sliderVal = document.getElementById('slider-val');
+  const riskSelect = document.getElementById('estimator-risk');
+  
+  if (!scaleSelect || !classSlider || !riskSelect) return;
+
+  const valueDisplay = document.getElementById('estimator-value-val');
+  const riskBadge = document.getElementById('estimator-risk-badge');
+  const riskDesc = document.getElementById('estimator-risk-desc');
+  const recomTier = document.getElementById('estimator-recom-tier');
+
+  const updateEstimates = () => {
+    const scale = scaleSelect.value;
+    const classes = parseInt(classSlider.value);
+    const riskLevel = riskSelect.value;
+
+    // Update slider label bubble
+    if (sliderVal) {
+      sliderVal.textContent = classes + (classes === 1 ? ' Class' : ' Classes');
+    }
+
+    // Protection Valuation Index Math
+    let baseVal = 25000; // Startup default
+    if (scale === 'mid') baseVal = 95000;
+    if (scale === 'enterprise') baseVal = 350000;
+
+    // Multipliers
+    const classMultiplier = 1 + (classes - 1) * 0.15;
+    let riskMultiplier = 1.0;
+    if (riskLevel === 'medium') riskMultiplier = 1.25;
+    if (riskLevel === 'high') riskMultiplier = 1.6;
+
+    const totalProtectedValue = Math.round(baseVal * classMultiplier * riskMultiplier);
+
+    // Format currency
+    const formattedValue = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0
+    }).format(totalProtectedValue);
+
+    // Infringement Risk Level & Recommendations
+    let riskScore = classes * (riskLevel === 'high' ? 3 : riskLevel === 'medium' ? 2 : 1);
+    let computedRisk = 'low';
+    let riskBadgeText = 'Low Risk';
+    let riskText = 'Excellent availability potential. Minimal crowded database sectors found.';
+    let recommendation = 'Standard Search & Single Class Protection';
+
+    if (riskScore >= 9) {
+      computedRisk = 'critical';
+      riskBadgeText = 'Critical Risk';
+      riskText = 'Extreme risk of registration failure or litigation. Immediate examiner counsel required.';
+      recommendation = 'Elite Legal Search & Multi-Class Shield Portal';
+    } else if (riskScore >= 5) {
+      computedRisk = 'high';
+      riskBadgeText = 'High Risk';
+      riskText = 'Significant overlap risk. Similarity search audits highly recommended before submission.';
+      recommendation = 'Pro Legal Search & Full Class Shield Guard';
+    } else if (riskScore >= 3) {
+      computedRisk = 'moderate';
+      riskBadgeText = 'Moderate Risk';
+      riskText = 'Standard registry density. Minor similarity risk in software and commerce sectors.';
+      recommendation = 'Standard Search & 2-Class Protection Package';
+    }
+
+    // Render results
+    if (valueDisplay) {
+      valueDisplay.style.opacity = '0.3';
+      setTimeout(() => {
+        valueDisplay.textContent = formattedValue;
+        valueDisplay.style.opacity = '1';
+      }, 100);
+    }
+
+    if (riskBadge) {
+      riskBadge.className = `risk-level-indicator risk-${computedRisk}`;
+      riskBadge.innerHTML = `<i class="bi bi-shield-fill-exclamation"></i> ${riskBadgeText}`;
+    }
+
+    if (riskDesc) riskDesc.textContent = riskText;
+    if (recomTier) recomTier.textContent = recommendation;
+  };
+
+  // Attach event listeners
+  scaleSelect.addEventListener('change', updateEstimates);
+  classSlider.addEventListener('input', updateEstimates);
+  riskSelect.addEventListener('change', updateEstimates);
+
+  // Initialize display
+  updateEstimates();
 }

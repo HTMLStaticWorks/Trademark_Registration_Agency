@@ -322,6 +322,102 @@
     </div>
   </section>
 
+  <!-- Section 3.5: Global IP Coverage -->
+  <section id="global-coverage" class="container section-padding">
+    <div class="row justify-content-center">
+      <div class="col-xl-11 text-center mb-5 reveal-fade">
+        <span class="text-uppercase fw-bold text-warning letter-spacing-1">Global Registry Network</span>
+        <h2 class="mt-2 text-primary">WIPO & International Registrars</h2>
+        <p class="text-secondary max-width-600 mx-auto">We link directly to official patent and trademark offices across 150+ countries, automating global audits and accelerating processing speed.</p>
+      </div>
+
+      <div class="col-xl-11 reveal-fade animation-delay-1">
+        <div class="row g-4 align-items-stretch">
+          <!-- Left Tab Column -->
+          <div class="col-lg-5">
+            <div class="jurisdiction-list">
+              <button class="jurisdiction-tab-btn active" data-region="us" aria-label="Select United States region">
+                <div>
+                  <span class="region-code">North America</span>
+                  <h5>United States (USPTO)</h5>
+                </div>
+                <i class="bi bi-chevron-right text-warning fs-5"></i>
+              </button>
+              
+              <button class="jurisdiction-tab-btn" data-region="eu" aria-label="Select European Union region">
+                <div>
+                  <span class="region-code">Europe Union</span>
+                  <h5>European Union (EUIPO)</h5>
+                </div>
+                <i class="bi bi-chevron-right text-warning fs-5"></i>
+              </button>
+              
+              <button class="jurisdiction-tab-btn" data-region="uk" aria-label="Select United Kingdom region">
+                <div>
+                  <span class="region-code">United Kingdom</span>
+                  <h5>Great Britain (UKIPO)</h5>
+                </div>
+                <i class="bi bi-chevron-right text-warning fs-5"></i>
+              </button>
+
+              <button class="jurisdiction-tab-btn" data-region="ap" aria-label="Select Asia Pacific region">
+                <div>
+                  <span class="region-code">WIPO Registry</span>
+                  <h5>Asia-Pacific & International</h5>
+                </div>
+                <i class="bi bi-chevron-right text-warning fs-5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Detail Column -->
+          <div class="col-lg-7">
+            <div class="glass-card jurisdiction-detail-card h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
+                  <span class="registry-badge">
+                    <i class="bi bi-bank"></i> Registry Database
+                  </span>
+                  <div class="status-pulse-wrapper">
+                    <span class="pulse-dot"></span>
+                    <span id="region-status">Direct API Integration Active</span>
+                  </div>
+                </div>
+
+                <h3 id="region-registry-name" class="text-primary mb-4" style="font-weight: 700;">USPTO (United States Patent and Trademark Office)</h3>
+                
+                <div class="row g-4 mt-2">
+                  <div class="col-sm-6">
+                    <div class="stat-row">
+                      <span class="text-muted d-block small text-uppercase">Average Approval Speed</span>
+                      <h4 id="region-speed" class="text-primary mb-0 fw-bold">8-10 Months</h4>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="stat-row">
+                      <span class="text-muted d-block small text-uppercase">Success Rate</span>
+                      <h4 id="region-success" class="text-primary mb-0 fw-bold">94.2%</h4>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-4 pt-2">
+                  <span class="text-muted d-block small text-uppercase mb-2">Registry Filing Fees</span>
+                  <p id="region-cost" class="text-secondary fw-semibold mb-0">$250 per Nice class (USPTO government filing fee)</p>
+                </div>
+              </div>
+
+              <div class="mt-5 pt-3 border-top border-light-subtle d-flex flex-wrap gap-3 align-items-center justify-content-between">
+                <span class="text-muted small"><i class="bi bi-info-circle-fill text-warning me-1"></i> Data synced real-time from official registry API.</span>
+                <a href="./pages/pricing.html" class="text-warning fw-bold d-inline-flex align-items-center gap-1">Filing Packages <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Section 4: Services Overview -->
   <section class="container section-padding">
     <div class="row justify-content-center text-center mb-5 reveal-fade">
@@ -364,6 +460,95 @@
           <h4 class="text-primary mb-3">Trademark Renewal</h4>
           <p class="text-secondary mb-4">Worry-free maintenance of registered marks with system reminders, declaration of use filings, and timely legal reviews.</p>
           <a href="./pages/service-details.html" class="text-warning fw-bold mt-auto d-inline-flex align-items-center gap-1">Learn More <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4.5: Brand Security & Risk Estimator -->
+  <section id="estimator-tool" class="bg-light-offset section-padding" style="background-color: var(--bg-offset);">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5 reveal-fade">
+        <div class="col-lg-8">
+          <span class="text-uppercase fw-bold text-warning letter-spacing-1">Asset valuation</span>
+          <h2 class="mt-2 text-primary">Brand Security & Risk Estimator</h2>
+          <p class="text-secondary">Determine the estimated legal equity value of your brand asset and evaluate trademark overlap risk levels based on nice classification depth.</p>
+        </div>
+      </div>
+
+      <div class="row g-4 justify-content-center reveal-fade animation-delay-1">
+        <!-- Inputs Column -->
+        <div class="col-lg-6">
+          <div class="glass-card estimator-card h-100">
+            <h4 class="text-primary mb-4">Estimator Parameters</h4>
+            
+            <div class="mb-4">
+              <label for="estimator-scale" class="form-label fw-semibold text-primary">Scale of Business Operations</label>
+              <select id="estimator-scale" class="form-select form-control-premium" style="background-color: var(--bg-color); border: 1px solid var(--border-color); padding: 12px; border-radius: var(--radius-sm);">
+                <option value="startup" selected>Startup / Pre-revenue</option>
+                <option value="mid">Growing SMB / Series A</option>
+                <option value="enterprise">Enterprise Platform / Global Brand</option>
+              </select>
+            </div>
+
+            <div class="mb-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <label for="estimator-classes" class="form-label fw-semibold text-primary mb-0">Trademark Classes (Nice Classifications)</label>
+                <span id="slider-val" class="slider-val-bubble">1 Class</span>
+              </div>
+              <input type="range" class="estimator-range-slider" id="estimator-classes" min="1" max="10" value="1" step="1">
+              <div class="d-flex justify-content-between text-muted small mt-1">
+                <span>1 Class</span>
+                <span>5 Classes</span>
+                <span>10 Classes</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="estimator-risk" class="form-label fw-semibold text-primary">Industry Sector Density (Risk Weight)</label>
+              <select id="estimator-risk" class="form-select form-control-premium" style="background-color: var(--bg-color); border: 1px solid var(--border-color); padding: 12px; border-radius: var(--radius-sm);">
+                <option value="low" selected>Services / Consultancy (Standard Risk)</option>
+                <option value="medium">Retail / Fashion / Physical Goods (Medium Risk)</option>
+                <option value="high">SaaS / Web3 / Fintech / Tech (High Density Risk)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Outputs Display Column -->
+        <div class="col-lg-6">
+          <div class="glass-card estimator-display-card text-center justify-content-between h-100">
+            <div>
+              <span class="text-uppercase fw-bold text-muted letter-spacing-1 small">Estimated Asset Value Protected</span>
+              <div class="estimator-value-display mt-2 mb-2">
+                <span id="estimator-value-val">$25,000</span>
+              </div>
+              <p class="text-secondary small max-width-500 mx-auto">Calculated equity value protected under statutory trademark enforcement guidelines vs potential infringement recovery costs.</p>
+            </div>
+
+            <div class="my-4 p-3 rounded-3" style="background: rgba(var(--primary-rgb), 0.03); border: 1px dashed var(--border-color);">
+              <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+                <span class="text-muted fw-medium small">Infringement Risk:</span>
+                <span id="estimator-risk-badge" class="risk-level-indicator risk-low">
+                  <i class="bi bi-shield-fill-exclamation"></i> Low Risk
+                </span>
+              </div>
+              <p id="estimator-risk-desc" class="text-secondary small text-start mb-0">Excellent availability potential. Minimal crowded database sectors found.</p>
+            </div>
+
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex justify-content-between align-items-center text-start">
+                <div>
+                  <span class="text-muted small">Recommended Security Level:</span>
+                  <h6 id="estimator-recom-tier" class="text-primary mb-0 mt-1 fw-bold">Standard Search & Single Class Protection</h6>
+                </div>
+              </div>
+              
+              <div class="mt-2">
+                <a href="./pages/pricing.html" class="btn btn-premium btn-premium-primary w-100">Deploy Protection Package</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
