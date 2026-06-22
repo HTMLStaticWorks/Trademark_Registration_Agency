@@ -63,7 +63,10 @@
   background: rgba(3, 7, 18, 0.98);
 }
 
-[data-theme="dark"] .navbar-brand {
+[data-theme="dark"] .navbar-brand,
+[data-theme="dark"] .navbar-brand .logo-text,
+[data-theme="dark"] .footer-logo,
+[data-theme="dark"] .footer-logo .logo-text {
   color: #FFFFFF !important;
 }
 
@@ -145,8 +148,9 @@
 }
 
 [data-theme="dark"] .btn-premium-primary:hover {
-  color: #FFFFFF !important;
+  color: #030712 !important;
 }
+
 
 /* Forms */
 [data-theme="dark"] .form-label-premium {
@@ -315,7 +319,8 @@
 }
 
 /* Dark Mode Override for Auth Card Logo */
-[data-theme="dark"] .auth-logo {
+[data-theme="dark"] .auth-logo,
+[data-theme="dark"] .auth-logo .logo-text {
   color: #FFFFFF !important;
 }
 
@@ -323,6 +328,27 @@
 [data-theme="dark"] .fullscreen-menu {
   background: #030712;
 }
+
+/* Dark Mode Override for Accordions */
+[data-theme="dark"] .accordion-button {
+  color: var(--secondary-color) !important;
+}
+
+[data-theme="dark"] .accordion-button.collapsed {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .accordion-button::after {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* Dark Mode Override for Navigation Buttons Hover */
+[data-theme="dark"] .nav-login-btn:hover,
+[data-theme="dark"] .toggle-btn:hover {
+  color: #030712 !important;
+}
+
+
 
 
 

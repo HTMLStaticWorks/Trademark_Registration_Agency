@@ -184,6 +184,7 @@
 [dir="rtl"] p, 
 [dir="rtl"] a, 
 [dir="rtl"] li, 
+[dir="rtl"] button,
 [dir="rtl"] span:not(.logo-icon):not(.bi) {
   unicode-bidi: plaintext;
 }
@@ -212,3 +213,47 @@
   margin-left: 0.5rem !important;
   margin-right: 0 !important;
 }
+
+/* RTL Accordion Alignment */
+[dir="rtl"] .accordion-button {
+  text-align: right !important;
+}
+
+[dir="rtl"] .accordion-button::after {
+  margin-right: auto !important;
+  margin-left: 0 !important;
+}
+
+/* RTL Pricing Card Alignment */
+[dir="rtl"] .pricing-card ul {
+  text-align: left !important;
+}
+
+[dir="rtl"] .price-box {
+  direction: ltr !important;
+}
+
+/* RTL Checkbox & Switch Alignment */
+[dir="rtl"] .form-check {
+  padding-left: 0 !important;
+  padding-right: 1.5em !important;
+  text-align: right !important;
+}
+
+[dir="rtl"] .form-check .form-check-input {
+  float: right !important;
+  margin-left: 0 !important;
+  margin-right: -1.5em !important;
+}
+
+/* Switch specific overrides for RTL */
+[dir="rtl"] .form-check.form-switch {
+  padding-right: 2.5em !important;
+}
+
+[dir="rtl"] .form-check.form-switch .form-check-input {
+  margin-right: -2.5em !important;
+}
+
+
+

@@ -300,7 +300,8 @@ html {
 }
 
 .logo-icon {
-  fill: var(--secondary-color);
+  fill: var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
   transition: var(--transition-normal);
 }
 
@@ -308,8 +309,14 @@ html {
   letter-spacing: 0.05em;
 }
 
-.logo-text span {
-  color: var(--secondary-color);
+.navbar-brand .logo-text,
+.footer-logo .logo-text {
+  color: #000000 !important;
+}
+
+.logo-text span,
+.logo-text .text-warning {
+  color: var(--secondary-color) !important;
 }
 
 .navbar-nav .nav-link {
@@ -1051,9 +1058,10 @@ html {
   transform: scale(1.05);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   .pricing-card.popular {
     transform: none;
+    margin-top: 20px;
   }
 }
 
@@ -1440,10 +1448,10 @@ html {
 .auth-logo {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-family: var(--font-headings);
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: var(--primary-color);
   margin-bottom: 15px;
 }
@@ -1592,6 +1600,27 @@ html {
 @media (max-width: 1100px) {
   .hero-headline {
     font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .glass-card .card-buttons.mt-auto {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 15px !important;
+  }
+  
+  .glass-card .card-buttons.mt-auto .btn-premium {
+    width: 100% !important;
+    max-width: 300px !important;
+    text-align: center !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding: 10px 20px !important;
+    font-size: 0.9rem !important;
+    white-space: normal !important;
   }
 }
 
@@ -1754,25 +1783,6 @@ html {
   .luxury-footer .input-group .btn-premium {
     width: auto !important;
   }
-
-  .glass-card .card-buttons.mt-auto {
-    display: flex !important;
-    flex-direction: column !important;
-    flex-wrap: wrap !important;
-    align-items: center !important;
-    gap: 15px !important;
-  }
-  
-  .glass-card .card-buttons.mt-auto .btn-premium {
-    width: 100% !important;
-    max-width: 300px !important;
-    text-align: center !important;
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-    padding: 10px 20px !important;
-    font-size: 0.9rem !important;
-    white-space: normal !important;
-  }
 }
 
 @media (max-width: 576px) {
@@ -1921,6 +1931,10 @@ html {
 
 /* Premium Tab Pills Styling */
 .btn-premium-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
   color: var(--text-secondary) !important;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-card) !important;
@@ -1948,14 +1962,11 @@ html {
 /* Fix icons alignment and spacing inside premium pill buttons */
 .btn-premium-pill i.bi {
   display: inline-block !important;
-  margin-left: 0 !important;
-  margin-right: 8px !important;
-  vertical-align: -0.125em !important;
+  margin: 0 !important;
 }
 
 [dir="rtl"] .btn-premium-pill i.bi {
-  margin-right: 0 !important;
-  margin-left: 8px !important;
+  margin: 0 !important;
 }
 
 /* Fix Contact Info & Checklist Alignments inside Glass Cards */
@@ -2290,4 +2301,10 @@ html {
   border: 1px solid rgba(244, 63, 94, 0.35);
   box-shadow: 0 0 10px rgba(225, 29, 72, 0.15);
 }
+
+/* Background utilities */
+.bg-secondary-light {
+  background-color: var(--secondary-light) !important;
+}
+
 
